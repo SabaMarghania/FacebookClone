@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+.sidebarRow{
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    width: 240px;
+}
+.sidebarRow__title{
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 20px;
+    flex:1;
+    color: rgb(53, 52, 52);
+}
+.sidebarRow__icon{
+    color:#095fcf;
+    
+    font-size: 25px !important;
+}
+.sidebarRow:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.sidebarRow:hover > .sidebarRow__title{
+    font-weight: bold;
+}
+.sidebarRow.selected{
+    background-color: lightgray;
+}
+/* .sidebarRow.selected > .sidebarRow__icon{
+    color: red;
+}
+.sidebarRow:hover > .sidebarRow__icon{
+    color: red;
+} */
+.sidebarRow.selected > .sidebarRow__title{
+    font-weight: bold;
+
+}
+

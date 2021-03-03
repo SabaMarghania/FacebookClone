@@ -1,0 +1,11 @@
+.StoriesRowCol{
+    display: flex;
+    width: 670px;
+    flex-direction: column;
+    align-items: center;
+}
+.StoriesRowCol__cont{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+}

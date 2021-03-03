@@ -1,0 +1,12 @@
+.stories{
+    display: flex;
+    width: 670px;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 80px;
+}
+.stories__cont{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+}
