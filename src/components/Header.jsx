@@ -27,11 +27,13 @@ function Header() {
   const[{user},dispatch] = useStateValue();
  
   //   ************************
-  const handleAnswerChange =(e)=>{
-    e.preventDefault();
-		if(e.key === 'Enter'){
-			console.log('The sky is your starting point!');
-	}}
+  useEffect(() => {
+    db.collection('messages').orderBy('timestamp', 'asc').onSnapshot(snapshot => {
+      setMessages(snapshot.docs.map(doc => ({ id: doc.id, data: doc.data()})))
+    })
+  
+  }, [])
+  
   const handleMsg =(e)=>{
       e.preventDefault();
       db.collection('messages').add({
@@ -45,12 +47,7 @@ function Header() {
   }
 
   //   ************************
-  useEffect(() => {
-    db.collection('messages').orderBy('timestamp', 'asc').onSnapshot(snapshot => {
-      setMessages(snapshot.docs.map(doc => ({ id: doc.id, data: doc.data()})))
-    })
-  
-  }, [])
+
   //   ************************
 
 
@@ -122,7 +119,6 @@ function Header() {
                   username={message.data.username}
       />
       ))}
-  
                 </div>
                         <form onSubmit={handleMsg} className='Chat__form'>
                             <input 

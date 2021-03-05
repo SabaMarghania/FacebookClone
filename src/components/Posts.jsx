@@ -18,6 +18,7 @@ function Posts() {
             profile: user.photoURL,
             name: user.displayName,
             image: inputURL,
+            
           })
           
           setInput('');
