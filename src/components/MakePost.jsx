@@ -106,7 +106,7 @@ function MakePost({ profile, image, name, timestamp, message}) {
             </div>}
                         
             {commented &&   <div className='MakePost__form'>
-               <Avatar src={profile} className="MakePost__avatar" />
+               <Avatar src={user.photoURL} className="MakePost__avatar" />
                <input 
                value={commentinput}
                 onChange={(e)=>setCommentInput(e.target.value)} type='text' placeholder='დაწერეთ კომენტარი...'/>
