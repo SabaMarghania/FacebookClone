@@ -15,7 +15,7 @@ function ChatMessage({username,messages,profile}) {
                 <div className='Chatmessage__info'>
                 <h4 className='Chatmessage__text'>{username}</h4>
                 <p>{messages}</p>
-                <div ref={messagesEndRef} />
+                <div  ref={messagesEndRef} />
 
              </div>
             </div>
