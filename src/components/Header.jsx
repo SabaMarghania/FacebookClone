@@ -120,13 +120,16 @@ function Header() {
       />
       ))}
                 </div>
-                        <form onSubmit={handleMsg} className='Chat__form'>
-                            <input 
-                            value={inputmsg}
-                            onChange={(e)=>setInputmsg(e.target.value)} type='text' placeholder='Aa'/>
-                            <SendIcon onClick={handleMsg}  style={{color:'#095fcf',marginRight:20}}/>
-                        </form>
-            </div>
+                <div className="header__form">
+                <input 
+                       value={inputmsg}
+                       onChange={(e)=>setInputmsg(e.target.value)} type='text' placeholder='Aa'/>
+                       {inputmsg.length > 0 &&
+                       <SendIcon onClick={handleMsg}  style={{color:'#095fcf',marginRight:20}}/>
+                           }
+                </div>
+                   
+                      </div>
         </Modal>
       </div>
 

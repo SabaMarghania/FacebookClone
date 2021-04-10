@@ -91,7 +91,8 @@ function MakePost({ profile, image, name, timestamp, message}) {
       </div>
       <div>
     {commented &&  <div className="MakePost__comments">
-              { comments.map((comment) => (
+           
+           {comments.map((comment) => (
                  <MakeComment
                   key={comment.id}
                   profile={comment.data.profile}
@@ -100,15 +101,17 @@ function MakePost({ profile, image, name, timestamp, message}) {
                   username={comment.data.username}
       />
       ))}
+           
+              
             </div>}
                         
-            {commented &&   <form onSubmit={HandleComment} className='MakePost__form'>
+            {commented &&   <div className='MakePost__form'>
                <Avatar src={profile} className="MakePost__avatar" />
                <input 
                value={commentinput}
                 onChange={(e)=>setCommentInput(e.target.value)} type='text' placeholder='დაწერეთ კომენტარი...'/>
-               <SendIcon onClick={HandleComment}  style={{color:'#095fcf',marginRight:20}}/>
-                        </form>}
+              {commentinput.length > 0 && <SendIcon onClick={HandleComment}  style={{color:'#095fcf',marginRight:20}}/> }
+                        </div>}
                         </div>
                         </div>
 

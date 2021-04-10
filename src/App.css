@@ -9,4 +9,5 @@ body{
 .app__body{
   flex-direction: row;
   display: flex;
+  padding-top: 3rem;
 }
