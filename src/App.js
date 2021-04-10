@@ -9,11 +9,7 @@ import Login from './components/Login';
 function App() {
   const [{ user }, dispatch] = useStateValue();
 
-  const s = (one,two)=>{
-    return one+two;
-  }  
-  console.log(s(5,1));
-s();
+ 
   return (
      <>
       {!user ? (
