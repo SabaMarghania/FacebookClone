@@ -57,7 +57,7 @@ function MakePost({ profile, image, name, timestamp, message}) {
         <Avatar src={profile} className="MakePost__avatar" />
         <div className="MakePost__topInfo">
           <h3>{name}</h3>
-          <p >{new Date(timestamp?.toDate()).toUTCString()}</p>
+          <p >{new Date(timestamp?.toDate()).toTimeString()}</p>
         </div>
       </div>
       <div className="MakePost__bottom">
