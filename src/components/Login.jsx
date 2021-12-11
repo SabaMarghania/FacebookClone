@@ -17,7 +17,6 @@ function Login() {
           type: actionTypes.SET_USER,
           user: result.user,
         });
-        console.log(result);
       })
       .catch((error) => {
         alert(error.message);
